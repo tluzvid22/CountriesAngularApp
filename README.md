@@ -14,17 +14,19 @@ This project was created with the help of the **Angular course by Fernando Herre
 ## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/CountriesAngularApp.git
-   cd CountriesAngularApp
-   ```
-2. Install dependencies:
- ```bash
- npm install
- ```
-3. Run the app:
+```bash
+git clone https://github.com/your-username/CountriesAngularApp.git
+cd CountriesAngularApp
+```
 
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run the app:
 ```bash
 ng serve
 ```
+
 4. Navigate to http://localhost:4200/ in your browser to view the app.
