@@ -15,7 +15,7 @@ This project was created with the help of the **Angular course by Fernando Herre
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/CountriesAngularApp.git
+git clone https://github.com/tluzvid22/CountriesAngularApp.git
 cd CountriesAngularApp
 ```
 
