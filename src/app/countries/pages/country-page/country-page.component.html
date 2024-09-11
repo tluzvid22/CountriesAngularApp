@@ -1,0 +1,32 @@
+<h2>País: <strong>{{country.name.common}}</strong></h2>
+<hr>
+
+<div class="row">
+  <div class="col-4">
+    <h4>Bandera</h4>
+    <img [src]="country.flags.svg" alt="{{country.name.common}} flag" class="img-thumbnail">
+  </div>
+
+  <div class="col">
+    <h4>Información</h4>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <strong>Población: </strong>
+        {{country.population | number}}
+      </li>
+      <li class="list-group-item">
+        <strong>Código: </strong>
+        {{country.cioc}}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row mt-2">
+  <h4>Traducciones</h4>
+  <div class="d-flex flex-wrap gap-1">
+    @for(translation of translations; track translation) {
+      <span class="badge bg-primary">{{translation}}</span>
+    }
+  </div>
+</div>

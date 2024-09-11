@@ -1,0 +1,27 @@
+<h2>Por región</h2>
+<hr>
+
+<div class="row">
+  <div class="col d-flex justify-content-center">
+    @for(region of regions; track region) {
+      <button
+        [class.btn-outline-primary]="selectedRegion === region"
+        (click)="searchByRegion(region)"
+        class="btn mx-2"
+      >
+        {{region}}
+        </button>
+    }
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <hr>
+    @if( isLoading ) {
+      <shared-loading-spinner></shared-loading-spinner>
+    }
+    <countries-table [countries]="countries"></countries-table>
+    <!--Tabla de resultados-->
+  </div>
+</div>
