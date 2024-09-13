@@ -4,32 +4,32 @@
 
 <ng-template #table>
   <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Icon</th>
-          <th scope="col">Bandera</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Capital</th>
-          <th scope="col">Población</th>
-          <th scope="col"></th>
-        </tr>
-      </thead>
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Icon</th>
+      <th scope="col">Bandera</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Capital</th>
+      <th scope="col">Población</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
 
-      <tbody>
-        @for(country of countries; track country; let index = $index) {
-          <tr>
-            <td>{{ index+1 }}</td>
-            <td>{{ country.flag }}</td>
-            <td>
-              <img [src]="country.flags.svg" alt="{{country.name.common+' flag'}}" width="25px">
-            </td>
-            <td>{{ country.name.common}}</td>
-            <td>{{ country.capital}}</td>
-            <td>{{ country.population | number}}</td>
-            <td><a routerLink="/countries/by/{{country.cioc}}">Info</a></td>
-          </tr>
-        }
+    <tbody>
+      @for(country of countries; track country; let index = $index) {
+        <tr>
+          <td>{{ index+1 }}</td>
+          <td>{{ country.flag }}</td>
+          <td>
+            <img [src]="country.flags.svg" alt="{{country.name.common+' flag'}}" width="25px">
+          </td>
+          <td>{{ country.name.common}}</td>
+          <td>{{ country.capital}}</td>
+          <td>{{ country.population | number}}</td>
+          <td><a routerLink="/countries/by/{{country.cioc}}">Info</a></td>
+        </tr>
+      }
     </tbody>
   </table>
 </ng-template>

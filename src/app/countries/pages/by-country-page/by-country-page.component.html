@@ -1,14 +1,16 @@
-<h2>Por país</h2>
-<hr>
+<div class="sticky-top bg-white">
+  <h2>Por país</h2>
+  <hr>
 
-<div class="row">
-  <div class="col">
-    <shared-search-box
-      (onValue)="searchByCountry($event)"
-      placeholder="{{searchBoxPlaceholder}}"
-    ></shared-search-box>
-    <hr>
+  <div class="row">
+    <div class="col">
+      <shared-search-box
+        (onValue)="searchByCountry($event)"
+        placeholder="{{searchBoxPlaceholder}}"
+      ></shared-search-box>
+    </div>
   </div>
+  <hr>
 </div>
 
 <div class="row">

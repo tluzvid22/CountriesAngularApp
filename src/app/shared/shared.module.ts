@@ -7,6 +7,7 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
+import { NotFound404Component } from './components/not-found404/not-found404.component';
 
 
 
@@ -18,18 +19,20 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
     SidebarComponent,
     SearchBoxComponent,
     LoadingSpinnerComponent,
+    NotFound404Component,
   ],
   imports: [
     CommonModule,
     RouterLink,
     RouterLinkActive
   ],
-    exports: [
-        AboutPageComponent,
-        HomePageComponent,
-        SearchBoxComponent,
-        SidebarComponent,
-        LoadingSpinnerComponent,
-    ]
+  exports: [
+    AboutPageComponent,
+    HomePageComponent,
+    SearchBoxComponent,
+    SidebarComponent,
+    LoadingSpinnerComponent,
+    NotFound404Component
+  ]
 })
 export class SharedModule { }

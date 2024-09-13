@@ -6,13 +6,21 @@ import {ByCountryPageComponent} from "./pages/by-country-page/by-country-page.co
 import {ByRegionPageComponent} from "./pages/by-region-page/by-region-page.component";
 import {CountryPageComponent} from "./pages/country-page/country-page.component";
 import {CountryPageResolver} from "./pages/country-page/shared/resolvers/country-page.resolver";
+import {NotFound404Component} from "../shared/components/not-found404/not-found404.component";
+import {CountryPageGuard} from "./pages/country-page/shared/auth/country-page.guard";
 
 const routes: Routes = [
   {path: 'by-capital', component:  ByCapitalPageComponent},
   {path: 'by-country', component: ByCountryPageComponent},
   {path: 'by-region', component: ByRegionPageComponent},
-  {path: 'by/:id', component: CountryPageComponent, resolve: {countryPageResolver: CountryPageResolver} },
-  {path: '**', redirectTo: 'by-capital'},
+  {
+    path: 'by/:id', component: CountryPageComponent,
+    resolve: {countryPageResolver: CountryPageResolver},
+    canMatch: [CountryPageGuard]
+
+  },
+  {path: 'not-found', component: NotFound404Component},
+  {path: '**', redirectTo: 'not-found'},
 ]
 
 @NgModule({

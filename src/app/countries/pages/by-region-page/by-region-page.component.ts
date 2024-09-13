@@ -7,7 +7,11 @@ import {firstValueFrom} from "rxjs";
 @Component({
   selector: 'app-by-region-page',
   templateUrl: './by-region-page.component.html',
-  styles: ``
+  styles: `.buttons button:hover {
+    background-color: #408DFD;
+    color: white;
+    transition: all 0.2s ease;
+  }`
 })
 export class ByRegionPageComponent {
   countries:       Country[] = [];

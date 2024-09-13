@@ -1,23 +1,25 @@
-<h2>Por región</h2>
-<hr>
+<div class="sticky-top bg-white">
+  <h2>Por región</h2>
+  <hr>
 
-<div class="row">
-  <div class="col d-flex justify-content-center">
-    @for(region of regions; track region) {
-      <button
-        [class.btn-outline-primary]="selectedRegion === region"
-        (click)="searchByRegion(region)"
-        class="btn mx-2"
-      >
-        {{region}}
+  <div class="row">
+    <div class="col d-flex justify-content-center buttons">
+      @for(region of regions; track region) {
+        <button
+          [class.btn-outline-primary]="selectedRegion === region"
+          (click)="searchByRegion(region)"
+          class="btn mx-2 hover-shadow"
+        >
+          {{region}}
         </button>
-    }
+      }
+    </div>
   </div>
+  <hr>
 </div>
 
 <div class="row">
   <div class="col">
-    <hr>
     @if( isLoading ) {
       <shared-loading-spinner></shared-loading-spinner>
     }
