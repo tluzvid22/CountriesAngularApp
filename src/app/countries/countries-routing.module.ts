@@ -19,8 +19,7 @@ const routes: Routes = [
     canMatch: [CountryPageGuard]
 
   },
-  {path: 'not-found', component: NotFound404Component},
-  {path: '**', redirectTo: 'not-found'},
+  {path: '**', redirectTo: 'by-capital'},
 ]
 
 @NgModule({
